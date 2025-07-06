@@ -11,8 +11,10 @@ require('dotenv').config();
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('MongoDB connected');
-    app.listen(3001, () => {
-      console.log('Server running at http://localhost:3001');
+    app.listen(3000, () => {
+      console.log('Server running at http://localhost:3000');
     });
   })
   .catch(err => console.error('MongoDB error:', err));
+
+module.exports = app;
