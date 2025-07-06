@@ -18,3 +18,7 @@ mongoose.connect(process.env.MONGODB_URI)
   .catch(err => console.error('MongoDB error:', err));
 
 module.exports = app;
+
+app.get("/", (req, res) => {
+  res.send("API is working!");
+});
